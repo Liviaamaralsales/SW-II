@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #2C3930;
+    --color-primary-light: #3F4F44;
+    --color-brown: #A27B5C;
+    --marfin: #DCD7C9;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+
+    --container-width-lg: 76%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--marfin);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--color-white);
+}
+
+/* ======================== NAVBAR ============================ */
+
+nav {
+    background: var(--color-primary-light);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-menu a {
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--color-brown);
+}
+
+/* ======================== HEADER ============================ */
+
+header {
+    color: var(--color-primary);
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-top: 1rem;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.header-left p {
+    margin: 1rem 0 2.4rem;
+}
+
+/* ======================== RECEITAS ============================ */
+
+.receitas-1 {
+    background: var(--color-brown);
+    height: 50rem;
+}
+
+.receitas-1 h2 {
+    line-height: 1;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.receitas-2 {
+    height: 50rem;
+    color: var(--color-primary);
+}
+
+.receitas-2 h2 {
+    line-height: 1;
+    margin-bottom: 3rem;
+    margin-top: 10rem;
+}
+
+.receitas-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.receitas-left {
+    margin-right: 4rem;
+}
+
+.ingrediente {
+    margin-top: 30px;
+}
+
+.preparo {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.receitas-left p {
+    margin: 1rem 0 3rem;
+}
+
+.receita-right figure {
+    float: left;
+    position: relative;
+    background-color: var(--color-white);
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 60px;
+    box-shadow: 1px 2px 3px black;
+}
