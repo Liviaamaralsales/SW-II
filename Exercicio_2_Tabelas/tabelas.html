@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /*TIPO DA FONTE*/
+        }
+        table {
+            width: 500px; /*LARGURA DA TABELA*/
+            border-collapse: collapse; /*ELIMINA ESPAÇO ENTRE CÉLULAS*/
+        }
+        td, th {
+            border: 1px solid black; /*EXPESSURA E ESTILO DA BORDA*/
+            padding: 10px; /*DISTÂNCIA ENTRE O CONTEÚDO E AS BORDAS*/
+        }
+        caption {
+            font-size: 22px; /*TAMANHO DA FONTE DA TÍTULO DA TABELA*/
+            font-weight: bold; /*PESO OU INTENSIDADE DA FONTE*/
+            padding: 10px; /*DISTÂNCIA ENTRE O CONTEÚDO E AS BORDAS*/
+            background-color: lightgray; /*COR DO FUNDO DO TÍTULO DA TEBELA*/
+        }
+        thead, tfoot {
+            background-color: #383838; /*COR DO FUNDO DO CABEÇALHO E RODAPÉ DA TABELA*/
+            color: white; /*COR DA FONTE*/
+        }
+        tbody > tr:nth-child(odd) { /*LINHAS ÍMPARES*/
+            background-color: white; /*COR DE FUNDO DA LINHA*/
+        }
+        tbody > tr:nth-child(even) { /*LINHAS PARES*/
+            background-color: lightgray; /*COR DE FUNDO DA LINHA*/
+        }
+        td.num {
+            text-align: right; /*ALINHAMENTO DO TEXTO DA CLASS "NUM"*/
+        }
+    </style>
+</head>
+<body>
+    <h1>ESTRUTURA DE TABELAS GRANDES</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+
+            THEAD
+                TR (table row), TD (table data), TH (table head)
+            TBODY
+                TR (table row), TD (table data), TH (table head)
+            TFOOT
+                TR (table row), TD (table data), TH (table head)
+    -->
+    
+    <h2>TABELA 1</h2>
+    <table>
+        <caption>POPULAÇÃO DOS ESTADOS</caption>
+        <thead>
+            <tr>
+                <th colspan="2">SUDESTE</th>
+            </tr>
+
+            <tr>
+                <th>Estado</th> <!-- COLUNA -->
+                <th style="width: 50px;">Quantidade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td> <!-- LINHA -->
+                <td class="num">44 milhões</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20 milhões</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 milhões</td>
+            </tr>
+
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 milhões</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td class="num"><strong>84 milhões</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>TABELA 2</h2>
+    <table>
+        <caption>COMIDAS FAVORITAS</caption>
+        <thead>
+            <tr>
+                <th><strong>Grupos</strong></th>
+                <th><strong>Nomes</strong></th>
+                <th colspan="3"><strong>Escolhas</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2"><strong>Mulheres</strong></th>
+                <td>Maria</td>
+                <td><img src="https://tdc01z.vteximg.com.br/arquivos/ids/161989-1000-1000/melancia-granel-21464.png?v=638067865344730000" alt="melancia-granel" width="90px"></td>
+                <td><img src="https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2023/05/22/pamonha-r1ak8eh2lcfr.jpg" alt="pamonha" width="90px"></td>
+                <td><img src="https://naminhapanela.com/wp-content/uploads/2023/09/Taco-mexicano-3-735x490.jpg" alt="Taco-mexicano" width="90px"></td>
+            </tr>
+            <tr>
+                <td>Mariana</td>
+                <td><img src="https://xamegobom.com.br/wp-content/uploads/2017/04/brigadeiro-de-leite-condensado.jpg" alt="brigadeiro" width="90px"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp98KIc66cgKAPeOwIBnqKb9xeoHIFXf8wMA&s" alt="sorvete" width="90px"></td>
+                <td><img src="https://cdn.awsli.com.br/618/618763/produto/42764206b12d1e67ef.jpg" alt="Nutella" width="90px"></td>
+            </tr>
+
+            <tr>
+                <th rowspan="2"><strong>Homens</strong></th>
+                <td>Luis</td>
+                <td><img src="https://panattos.com.br/uploads/produtos/2017/03/coxinha-de-frango-com-requeijao-mini-congelada.jpg" alt="coxinha-de-frango-com-requeijao" width="90px"></td>
+                <td><img src="https://static.itdg.com.br/images/360-240/ec2a5e38702c60bf1ace0b5f1c8e9415/shutterstock-739787011.jpg" alt="lasanha" width="90px"></td>
+                <td><img src="https://media.istockphoto.com/id/535786572/pt/foto/sagital-bife-grelhado.jpg?s=612x612&w=0&k=20&c=h9JZuPdEFSGvdTZGl5IcYg4DsPLlB3x5CLsGKB341g8=" alt="bife-grelhado" width="90px"></td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td><img src="https://static.itdg.com.br/images/640-440/47d6583c93d77edac5244cab67ba660b/253447-378226756-original.jpg" alt="pizza" width="90px"></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVtIf14vAIFNd3mfdRP7y9hPelhiBE8PkySA&s" alt="feijoada" width="90px"></td>
+                <td><img src="https://renata.com.br/images/receitas/182/renata-imagem-receitas-nhoque-de-batata-share.jpg" alt="nhoque" width="90px"></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="2"><strong>Total</strong></th>
+                <td colspan="3"><strong>12 Opções</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>MESCLAGEM DE CÉLULAS - TABELA 3</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: white; color: black;">A</th>
+                <th colspan="2" style="background-color: white; color: black;">B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">C</td>
+                <td>D</td>
+                <td rowspan="2">E</td>
+            </tr>
+            <tr>
+                <td style="background-color: white;">F</td>
+            </tr>
+            <tr>
+                <td colspan="2">G</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
